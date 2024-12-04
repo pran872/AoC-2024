@@ -1,7 +1,7 @@
 import utils
 
 def prepare_data(filename):
-    data = utils.read_file_lines_no_n(filename)
+    data = utils.read_file_lines_no_newline(filename)
     data = [list(map(int, el.split(' '))) for el in data]
     return data 
 

@@ -2,7 +2,7 @@ import utils
 from collections import Counter
 
 def process_data(filename):
-    data = utils.read_file_lines_no_n(filename)
+    data = utils.read_file_lines_no_newline(filename)
     data = [el.split("   ") for el in data]
     l_data, r_data = zip(*data)
     return list(l_data), list(r_data)
