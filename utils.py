@@ -15,3 +15,12 @@ def read_file(filename):
     '''Returns string'''
     with open(filename, 'r') as f:
         return f.read()
+    
+def read_file_2_sections(filename):
+    with open(filename, 'r') as f:
+        data = read_file(filename)
+        data1, data2 = data.split("\n\n")
+        data1 = data1.split('\n')
+        data2 = data2.split('\n')
+        
+        return data1, data2
