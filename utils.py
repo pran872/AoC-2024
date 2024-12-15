@@ -1,3 +1,5 @@
+import numpy as np
+
 def read_file_lines(filename):
     '''Returns list; each element is a line, each element ends with \n'''
     with open(filename, 'r') as f:
@@ -24,3 +26,9 @@ def read_file_2_sections(filename):
         data2 = data2.split('\n')
         
         return data1, data2
+
+def get_grid(filename):
+    data = read_file_lines_no_newline(filename)
+    data = [list(i) for i in data]
+    data = np.array(data)
+    return data
